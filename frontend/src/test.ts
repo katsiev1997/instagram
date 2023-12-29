@@ -1,5 +1,5 @@
 
 
 export const test = (a: string) => {
-    console.log('test')
+    console.log('123123123')
 }
