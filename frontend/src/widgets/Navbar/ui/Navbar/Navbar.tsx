@@ -1,5 +1,7 @@
 import React from 'react';
 import cls from './Navbar.module.scss';
+import Logo from '@/shared/assets/Logo.png';
+import Home from '@/shared/assets/svg/Home.svg';
 import { NavSearch, NavMenu } from '../';
 
 export const Navbar = () => {
@@ -7,8 +9,10 @@ export const Navbar = () => {
     <div className={cls.navbar}>
       <div className='container'>
         <div className={cls.wrap}>
-          <h1>Logo</h1>
+          <img src={Logo} alt='Logo' />
+          <Home />
           <NavSearch />
+
           <NavMenu />
         </div>
       </div>

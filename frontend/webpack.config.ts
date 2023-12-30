@@ -29,6 +29,14 @@ export default (env: any) => {
           exclude: /node_modules/,
         },
         {
+          test: /\.(png|jpe?g|gif)$/i,
+          use: [
+            {
+              loader: 'file-loader',
+            },
+          ],
+        },
+        {
           test: /\.s[ac]ss$/i,
           use: [
             isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
@@ -49,11 +57,18 @@ export default (env: any) => {
             'sass-loader',
           ],
         },
+        {
+          test: /\.svg$/,
+          use: ['@svgr/webpack'],
+        },
       ],
     },
 
     resolve: {
       extensions: ['.tsx', '.ts', '.js'],
+      alias: {
+        '@': path.resolve(__dirname, 'src'),
+      },
     },
     devtool: isDev ? 'inline-source-map' : undefined,
     devServer: isDev

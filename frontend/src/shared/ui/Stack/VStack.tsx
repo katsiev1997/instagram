@@ -1,0 +1,11 @@
+import React, { FC } from 'react'
+import { Flex, FlexProps } from './Flex'
+type VStackProps = Omit<FlexProps , 'direction'>
+
+export const VStack: FC<VStackProps> = ({...rest}) => {
+  return (
+    <Flex direction='column' {...rest}>
+
+    </Flex>
+  )
+}

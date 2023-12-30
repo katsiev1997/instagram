@@ -1,0 +1,25 @@
+.btn {
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 9px;
+
+  &:disabled {
+  }
+  &.disabled {
+  }
+  &.default {
+    background: var(--blue);
+    color: #fff;
+  }
+  &.outline {
+    border: 1px solid var(--border);
+    color: var(--text-color);
+    background: transparent;
+  }
+  &.max {
+    width: 100%;
+  }
+}
