@@ -1,3 +1,5 @@
 import ReactDOM from 'react-dom/client';
-import Counter from './components/Counter';
-ReactDOM.createRoot(document.getElementById('root')).render(<Counter />);
+import App from './app/App';
+import './app/styles/index.scss'
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
