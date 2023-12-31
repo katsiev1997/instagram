@@ -95,6 +95,9 @@ export default (env: any) => {
       new webpack.ProgressPlugin(),
       new webpack.HotModuleReplacementPlugin(),
       new ReactRefreshWebpackPlugin(),
+      new webpack.DefinePlugin({
+        DEV: JSON.stringify(isDev)
+      })
     ],
   };
   return config;

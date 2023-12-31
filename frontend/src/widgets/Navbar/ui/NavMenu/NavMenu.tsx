@@ -9,6 +9,7 @@ import { classNames } from '@/shared/lib/classNames';
 import { Avatar, Icon } from '@/shared/ui';
 import { Link } from 'react-router-dom';
 import { INavMenuItem } from '../../model/consts/navMenu';
+import { LangSwitch } from '@/widgets/LangSwitch/ui/LangSwitch';
 
 export const NavMenu = () => {
   const { theme } = useContext(ThemeContext);
@@ -43,6 +44,9 @@ export const NavMenu = () => {
             )}
           </li>
         ))}
+        <li >
+          <LangSwitch />
+        </li>
         <li>
           <SwitchButton />
         </li>
