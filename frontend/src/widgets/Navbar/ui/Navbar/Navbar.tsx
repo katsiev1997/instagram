@@ -5,6 +5,7 @@ import cls from './Navbar.module.scss';
 import { ThemeContext } from '@/app/provider';
 import { Theme } from '@/shared/consts/theme';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
   const { theme } = useContext(ThemeContext);
@@ -12,11 +13,14 @@ export const Navbar = () => {
     <div className={cls.navbar}>
       <div className='container'>
         <div className={cls.wrap}>
-          <img
-            className={theme === Theme.DARK && cls.dark}
-            src={Logo}
-            alt='Logo'
-          />
+          <Link to='/'>
+            <img
+              className={theme === Theme.DARK && cls.dark}
+              src={Logo}
+              alt='Logo'
+            />
+          </Link>
+
           <NavSearch />
           <NavMenu />
         </div>

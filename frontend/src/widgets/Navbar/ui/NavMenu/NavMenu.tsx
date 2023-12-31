@@ -7,13 +7,14 @@ import { SwitchButton } from '@/features';
 import { Theme } from '@/shared/consts/theme';
 import { classNames } from '@/shared/lib/classNames';
 import { Avatar, Icon } from '@/shared/ui';
+import { Link } from 'react-router-dom';
 import { INavMenuItem } from '../../model/consts/navMenu';
 
 export const NavMenu = () => {
   const { theme } = useContext(ThemeContext);
 
   const navMenuItems: INavMenuItem[] = [
-    { href: '/', type: 'Home' },
+    { href: '/profile', type: 'Home' },
     { href: '/messenger', type: 'Messenger' },
     { type: 'NewPosts' },
     { href: '/explore', type: 'FindPeople' },
@@ -22,9 +23,9 @@ export const NavMenu = () => {
   return (
     <nav className={cls.nav}>
       <ul className={cls.list}>
-        {navMenuItems.map((item,i) => (
+        {navMenuItems.map((item, i) => (
           <li
-          key={i}
+            key={i}
             className={classNames(
               cls.item,
               {
@@ -34,9 +35,9 @@ export const NavMenu = () => {
             )}
           >
             {item.href ? (
-              <a href={item.href} className={cls.link}>
+              <Link to={item.href} className={cls.link}>
                 <Icon type={item.type} />
-              </a>
+              </Link>
             ) : (
               <Icon type={item.type} />
             )}
