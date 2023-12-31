@@ -3,7 +3,7 @@ import { Navbar } from '../widgets';
 
 const App = () => {
   return (
-    <div className='app_dark'>
+    <div>
       <Navbar />
       <Button variant='outline'>Like post</Button>
     </div>

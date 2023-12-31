@@ -33,7 +33,7 @@ export const Avatar: FC<AvatarProps> = (props) => {
   ];
   return (
     <div className={classNames(cls.avatar, {}, classes)}>
-      {src ? <img src={src} alt='' /> : 'In'}
+      <div>{src ? <img src={src} alt='' /> : 'In'}</div>
     </div>
   );
 };
