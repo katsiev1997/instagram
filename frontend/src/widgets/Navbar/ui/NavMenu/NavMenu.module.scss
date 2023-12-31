@@ -1,0 +1,11 @@
+.nav {
+  .list {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+}
+
+.dark {
+  filter: invert(100%);
+}
