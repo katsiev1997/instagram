@@ -7,17 +7,16 @@ import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 type BuildMode = 'development' | 'production';
 
 interface BuildEnv {
-  mode: '';
-  port: number;
+  mode: BuildMode
+  port: number
 }
 
-export default (env: any) => {
-  console.log(env);
-
-  const mode = env.mode || 'development';
+export default (env: BuildEnv) => {
   const port = env.port || 3000;
+  const mode = env.mode || 'development';
   const isDev = mode === 'development';
 
+  console.log(port);
   const config = {
     mode: 'development',
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
@@ -96,8 +95,8 @@ export default (env: any) => {
       new webpack.HotModuleReplacementPlugin(),
       new ReactRefreshWebpackPlugin(),
       new webpack.DefinePlugin({
-        DEV: JSON.stringify(isDev)
-      })
+        DEV: JSON.stringify(isDev),
+      }),
     ],
   };
   return config;

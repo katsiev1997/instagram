@@ -1,9 +1,9 @@
 import { lazy } from 'react';
 
 export const RegisterLazyPage = lazy(
-  () =>
-    new Promise((res) => {
-      //@ts-ignore
-      setTimeout(() => res(import('./RegisterPage')), 1000);
+  async () =>
+    await new Promise((res) => {
+      // @ts-expect-error
+      setTimeout(() => { res(import('./RegisterPage')); }, 1000);
     })
 );

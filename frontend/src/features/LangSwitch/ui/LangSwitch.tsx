@@ -8,8 +8,8 @@ export const LangSwitch = () => {
     i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
   };
   return (
-    <div className={cls.switch_lang} onClick={() => toggle()}>
-      {i18n.language}
-    </div>
+        <div className={cls.switch_lang} onClick={() => { toggle(); }}>
+            {i18n.language}
+        </div>
   );
 };

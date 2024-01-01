@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { type ChangeEvent, useState } from 'react';
 import cls from './NavSearch.module.scss';
 import { Icon } from '@/shared/ui';
 import { Text } from '@/shared/ui/Text/Text';

@@ -1,6 +1,6 @@
-import { ReactNode, FC } from 'react';
+import { type ReactNode, type FC } from 'react';
 import cls from './Flex.module.scss';
-import { Mods, classNames } from '@/shared/lib/classNames';
+import { type Mods, classNames } from '@/shared/lib/classNames';
 
 type DirectionType = 'row' | 'column';
 type JustifyType = 'center' | 'end' | 'start' | 'between';
@@ -8,14 +8,14 @@ type AlignType = 'center' | 'end' | 'start';
 type WrapType = 'wrap' | 'nowrap';
 type GapType = 0 | 4 | 8 | 12 | 16 | 18 | 22 | 26 | 28 | 32 | 36 | 40;
 export interface FlexProps {
-  children: ReactNode;
-  direction?: DirectionType;
-  justify?: JustifyType;
-  align?: AlignType;
-  wrap?: WrapType;
-  gap?: GapType;
-  max?: boolean;
-  className?: string;
+  children: ReactNode
+  direction?: DirectionType
+  justify?: JustifyType
+  align?: AlignType
+  wrap?: WrapType
+  gap?: GapType
+  max?: boolean
+  className?: string
 }
 
 export const Flex: FC<FlexProps> = (props) => {
@@ -27,27 +27,27 @@ export const Flex: FC<FlexProps> = (props) => {
     justify = 'start',
     wrap = 'nowrap',
     gap = 0,
-    max = false,
+    max = false
   } = props;
 
   const directionClasses: Record<DirectionType, string> = {
     column: cls.column,
-    row: cls.row,
+    row: cls.row
   };
   const justifyClasses: Record<JustifyType, string> = {
     between: cls.between,
     center: cls.center,
     end: cls.end,
-    start: cls.start,
+    start: cls.start
   };
   const alignClasses: Record<AlignType, string> = {
     center: cls.alignCenter,
     end: cls.alignEnd,
-    start: cls.alignStart,
+    start: cls.alignStart
   };
   const wrapClasses: Record<WrapType, string> = {
     wrap: cls.wrap,
-    nowrap: cls.nowrap,
+    nowrap: cls.nowrap
   };
   const gapClasses: Record<GapType, string> = {
     0: cls.gap0,
@@ -61,11 +61,11 @@ export const Flex: FC<FlexProps> = (props) => {
     28: cls.gap28,
     32: cls.gap32,
     36: cls.gap36,
-    40: cls.gap40,
+    40: cls.gap40
   };
 
   const mods: Mods = {
-    [cls.max]: max,
+    [cls.max]: max
   };
   const classes = [
     direction && directionClasses[direction],
@@ -73,8 +73,8 @@ export const Flex: FC<FlexProps> = (props) => {
     justify && justifyClasses[justify],
     gap && gapClasses[gap],
     wrap && wrapClasses[wrap],
-    className,
+    className
   ];
 
-  return <div className={classNames(cls.flex, {}, classes)}>{children}</div>;
+  return <div className={classNames(cls.flex, mods, classes)}>{children}</div>;
 };

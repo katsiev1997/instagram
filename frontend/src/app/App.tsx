@@ -9,21 +9,14 @@ import {
 
 import { Navbar } from '../widgets';
 import { Route, Routes } from 'react-router-dom';
-import { Suspense } from 'react';
-import { useTranslation } from 'react-i18next';
+import { type FC, Suspense } from 'react';
 
-function MyComponent() {
-  const { t, i18n } = useTranslation();
-
-  return <h1>{t('Welcome to React')}</h1>;
-}
-
-const App = () => {
+const App: FC = () => {
+  const auth = false
   return (
     <div className='app'>
       <Suspense fallback=''>
-        <Navbar />
-        <MyComponent />
+        {auth && <Navbar />}
         <div className='container'>
           <Suspense fallback={<h1>Loading...</h1>}>
             <Routes>

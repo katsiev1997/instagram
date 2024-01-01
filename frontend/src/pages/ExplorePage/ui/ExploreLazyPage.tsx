@@ -1,9 +1,9 @@
 import { lazy } from 'react';
 
 export const ExploreLazyPage = lazy(
-  () =>
-    new Promise((res) => {
-      //@ts-ignore
-      setTimeout(() => res(import('./ExplorePage')), 1000);
+  async () =>
+    await new Promise((res) => {
+      // @ts-expect-error
+      setTimeout(() => { res(import('./ExplorePage')); }, 1000);
     })
 );

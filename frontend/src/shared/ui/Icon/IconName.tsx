@@ -28,5 +28,5 @@ export const IconName: Record<IconType, JSX.Element> = {
   google: <Google />,
   Light: <Light />,
   NewPosts: <NewPosts />,
-  FindPeople: <FindPeople />,
+  FindPeople: <FindPeople />
 };

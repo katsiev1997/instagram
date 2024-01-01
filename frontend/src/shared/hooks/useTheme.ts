@@ -3,8 +3,8 @@ import { useContext } from 'react';
 import { Theme } from '../consts/theme';
 
 interface IUseTheme {
-  theme: Theme;
-  toggleTheme: () => void;
+  theme: Theme
+  toggleTheme: () => void
 }
 
 export const useTheme = (): IUseTheme => {
@@ -18,6 +18,6 @@ export const useTheme = (): IUseTheme => {
   };
   return {
     toggleTheme,
-    theme,
+    theme
   };
 };

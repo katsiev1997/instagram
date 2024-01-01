@@ -8,13 +8,15 @@ export const SwitchButton = () => {
   return (
     <div
       className={theme === Theme.DARK && cls.dark}
-      onClick={() => toggleTheme()}
+      onClick={() => { toggleTheme(); }}
     >
-      {theme === Theme.DARK ? (
+      {theme === Theme.DARK
+        ? (
         <Icon type='Light' />
-      ) : (
+          )
+        : (
         <Icon className={theme} type='Dark' />
-      )}
+          )}
     </div>
   );
 };

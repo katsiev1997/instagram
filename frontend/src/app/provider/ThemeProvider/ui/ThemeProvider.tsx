@@ -1,8 +1,8 @@
 import { LOCAL_STORAGE_THEME } from '@/shared/consts/localStorage';
 import { Theme } from '@/shared/consts/theme';
 import {
-  FC,
-  ReactNode,
+  type FC,
+  type ReactNode,
   createContext,
   useEffect,
   useMemo,
@@ -10,12 +10,12 @@ import {
 } from 'react';
 
 interface IThemeValues {
-  theme?: Theme;
-  setTheme?: (theme?: Theme) => void;
+  theme?: Theme
+  setTheme?: (theme?: Theme) => void
 }
 
 interface IThemeContext {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export const ThemeContext = createContext<IThemeValues>({});
