@@ -1,12 +1,13 @@
-import Home from '@/shared/assets/svg/Home.svg';
-import Messenger from '@/shared/assets/svg/Messenger.svg';
-import Search from '@/shared/assets/svg/Search.svg';
 import Dark from '@/shared/assets/svg/Dark.svg';
 import Favorite from '@/shared/assets/svg/Favorite.svg';
-import Google from '@/shared/assets/svg/google.svg';
-import Light from '@/shared/assets/svg/Light.svg';
-import NewPosts from '@/shared/assets/svg/NewPosts.svg';
 import FindPeople from '@/shared/assets/svg/FindPeople.svg';
+import Home from '@/shared/assets/svg/Home.svg';
+import Light from '@/shared/assets/svg/Light.svg';
+import Messenger from '@/shared/assets/svg/Messenger.svg';
+import NewPosts from '@/shared/assets/svg/NewPosts.svg';
+import Search from '@/shared/assets/svg/Search.svg';
+import Facebook from '@/shared/assets/svg/facebook.svg';
+import Google from '@/shared/assets/svg/google.svg';
 
 export type IconType =
   | 'Home'
@@ -17,7 +18,8 @@ export type IconType =
   | 'google'
   | 'NewPosts'
   | 'FindPeople'
-  | 'Light';
+  | 'Light'
+  | 'Facebook';
 
 export const IconName: Record<IconType, JSX.Element> = {
   Home: <Home />,
@@ -28,5 +30,6 @@ export const IconName: Record<IconType, JSX.Element> = {
   google: <Google />,
   Light: <Light />,
   NewPosts: <NewPosts />,
-  FindPeople: <FindPeople />
+  FindPeople: <FindPeople />,
+  Facebook: <Facebook />,
 };
