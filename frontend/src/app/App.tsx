@@ -13,7 +13,7 @@ import { type FC, Suspense } from 'react';
 import { Spinner } from '@/shared/ui';
 
 const App: FC = () => {
-  const auth = false;
+  const auth = true;
   return (
     <div className='app'>
       <Suspense fallback=''>

@@ -1,5 +1,6 @@
 import Logo from '@/shared/assets/Logo.png';
-import { NavMenu, NavSearch } from '../';
+import { NavMenu } from '../NavMenu/NavMenu';
+import { NavSearch } from '../NavSearch/NavSearch';
 import cls from './Navbar.module.scss';
 
 import { ThemeContext } from '@/app/provider';
@@ -15,7 +16,7 @@ export const Navbar = () => {
         <div className={cls.wrap}>
           <Link to='/'>
             <img
-              className={theme === Theme.DARK && cls.dark}
+              className={theme === Theme.DARK ? cls.dark : ''}
               src={Logo}
               alt='Logo'
             />

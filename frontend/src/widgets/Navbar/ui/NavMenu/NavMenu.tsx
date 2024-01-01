@@ -35,13 +35,7 @@ export const NavMenu = () => {
               []
             )}
           >
-            {item.href ? (
-              <Link to={item.href} className={cls.link}>
-                <Icon type={item.type} />
-              </Link>
-            ) : (
-              <Icon type={item.type} />
-            )}
+            {item.href ? (<Link to={item.href}><Icon type={item.type} /></Link>) : (<Icon type={item.type} />)}
           </li>
         ))}
         <li>

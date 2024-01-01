@@ -7,7 +7,7 @@ export const SwitchButton = () => {
   const { theme, toggleTheme } = useTheme();
   return (
     <div
-      className={theme === Theme.DARK && cls.dark}
+      className={theme === Theme.DARK ? cls.dark : ''}
       onClick={() => { toggleTheme(); }}
     >
       {theme === Theme.DARK

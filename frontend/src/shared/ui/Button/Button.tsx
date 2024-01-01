@@ -33,7 +33,7 @@ export const Button: FC<ButtonProps> = ({
     [cls.max]: max
   };
   return (
-    <button className={classNames(cls.btn, mods, classes)}>
+    <button disabled={disabled} className={classNames(cls.btn, mods, classes)}>
       {addOnLeft}
       {loading ? <div>Spinner...</div> : children}
       {addOnRight}
