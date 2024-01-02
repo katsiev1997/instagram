@@ -17,14 +17,27 @@ import {
   useRegisterForm,
 } from '../../model/schema/useRegisterForm';
 import { Theme } from '@/shared/consts/theme';
+import { registerByEmail } from '../../model/service/registerByEmail';
+import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
+import { useSelector } from 'react-redux';
+import { getAuthError } from '../../model/selectors/getAuthError';
+import { useNavigate } from 'react-router-dom';
+import { getAuthLoading } from '../../model/selectors/getAuthLoading';
 
 export const RegisterForm = () => {
   const { theme } = useContext(ThemeContext);
+  const navigate = useNavigate();
   const { register, watch, errors, isValid, RegisterFormNames, handleSubmit } =
     useRegisterForm();
-  const onSubmit = (data: RegisterFormValues) => {
+  const dispatch = useAppDispatch();
+  const authError = useSelector(getAuthError);
+  const authLoading = useSelector(getAuthLoading);
+  const onSubmit = async (data: RegisterFormValues) => {
     delete data.cf_password;
-    console.log(data);
+    const res = await dispatch(registerByEmail(data));
+    if (res.meta.requestStatus === 'fulfilled') {
+      navigate('/login');
+    }
   };
   return (
     <HStack justify='center'>
@@ -97,11 +110,15 @@ export const RegisterForm = () => {
               <Text color='gray' size={10}>
                 Регистрируясь вы принимаете условия. Прочтите политику
                 конфиденциальности, чтобы узнать, как мы получаем, используем и
-                передаем ваши данные. Также посмотрите Политику в отношении
-                фалов cookie, чтобы узнать, как мы используем файлы cookie и
-                подобные технологии.
+                передаем ваши данные.
               </Text>
-              <Button type='submit' disabled={!isValid} max>
+              {authError && <Text color='error'>{authError}</Text>}
+              <Button
+                loading={authLoading}
+                type='submit'
+                disabled={!isValid}
+                max
+              >
                 Зарегистрироваться
               </Button>
             </VStack>

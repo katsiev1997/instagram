@@ -23,7 +23,7 @@ export const useRegisterForm = () => {
   const schema = yup.object().shape({
     email: yup.string().email('Почта не валидна').required(message),
     username: yup.string().required(message).min(3, 'Минимум 3 символов'),
-    fullname: yup.string().required(message).min(3, 'Минимум 3 символов'),
+    phone: yup.string().required(message).min(3, 'Минимум 3 символов'),
     password: yup.string().required(message).min(6, 'Минимум 6 символов'),
     cf_password: yup
       .string()

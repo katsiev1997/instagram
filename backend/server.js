@@ -8,10 +8,11 @@ const { ExpressPeerServer } = require('peer');
 const path = require('path');
 
 const app = express();
+app.use(express.json());
 app.use(
   cors({
-    origin: 'https://localhost:3000',
-    credentials: true,
+    // origin: 'https://localhost:3000',
+    // credentials: true,
   })
 );
 app.use(cookieParser());
@@ -36,19 +37,10 @@ app.use('/api', require('./routes/notifyRouter'));
 app.use('/api', require('./routes/messageRouter'));
 
 const URI = process.env.MONGODB_URL;
-mongoose.connect(
-  URI,
-  {
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  },
-  (err) => {
-    if (err) throw err;
-    console.log('Connected to MongoDB');
-  }
-);
+mongoose
+  .connect(URI)
+  .then(() => console.log('Connected to mongodb'))
+  .catch((error) => console.log(error));
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));

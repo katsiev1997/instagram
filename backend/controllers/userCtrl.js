@@ -7,7 +7,7 @@ const userCtrl = {
         username: { $regex: req.query.username },
       })
         .limit(10)
-        .select("fullname username avatar");
+        .select("phone username avatar");
 
       res.json({ users });
     } catch (err) {
@@ -28,16 +28,16 @@ const userCtrl = {
   },
   updateUser: async (req, res) => {
     try {
-      const { avatar, fullname, mobile, address, story, website, gender } =
+      const { avatar, phone, mobile, address, story, website, gender } =
         req.body;
-      if (!fullname)
-        return res.status(400).json({ msg: "Please add your full name." });
+      if (!phone)
+        return res.status(400).json({ msg: "Please add your phone." });
 
       await Users.findOneAndUpdate(
         { _id: req.user._id },
         {
           avatar,
-          fullname,
+          phone,
           mobile,
           address,
           story,
