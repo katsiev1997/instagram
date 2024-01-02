@@ -2,7 +2,7 @@ import { type ThunkConfig } from '@/app/provider';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-export const registerByEmail = createAsyncThunk<any, any, ThunkConfig>(
+export const registerByEmail = createAsyncThunk<any, any, ThunkConfig<string>>(
   'auth/register',
   async (userData, thunkApi) => {
     const { rejectWithValue } = thunkApi;
@@ -13,7 +13,7 @@ export const registerByEmail = createAsyncThunk<any, any, ThunkConfig>(
         userData
       );
       console.log(res);
-    } catch (error) {
+    } catch (error: any) {
       return rejectWithValue(error.response.data.msg);
     }
   }

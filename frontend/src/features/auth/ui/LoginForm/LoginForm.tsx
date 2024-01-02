@@ -17,14 +17,27 @@ import {
   useLoginForm,
 } from '../../model/schema/useLoginForm';
 import { Theme } from '@/shared/consts/theme';
+import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
+import { loginByEmail } from '../../model/service/loginByEmail';
+import { getAuthError } from '../../model/selectors/getAuthError';
+import { useSelector } from 'react-redux';
+import { getAuthLoading } from '../../model/selectors/getAuthLoading';
+import { useNavigate } from 'react-router-dom';
 
 export const LoginForm = () => {
   const { theme } = useContext(ThemeContext);
+  const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+  const authError = useSelector(getAuthError);
+  const authLoading = useSelector(getAuthLoading);
   const { register, watch, handleSubmit, errors, isValid, LoginFormNames } =
     useLoginForm();
 
-  const onSubmit = (data: LoginFormValues) => {
-    console.log(data);
+  const onSubmit = async (data: LoginFormValues) => {
+    const res = await dispatch(loginByEmail(data));
+    if (res.meta.requestStatus === 'fulfilled') {
+      navigate('/');
+    }
   };
   return (
     <HStack justify='center'>
@@ -46,7 +59,13 @@ export const LoginForm = () => {
                 error={errors?.password?.message}
                 placeholder='Пароль'
               />
-              <Button type='submit' disabled={!isValid} max>
+              {authError && <Text color='error'>{authError}</Text>}
+              <Button
+                type='submit'
+                disabled={!isValid && authLoading}
+                loading={authLoading}
+                max
+              >
                 Войти
               </Button>
               <Text>или</Text>

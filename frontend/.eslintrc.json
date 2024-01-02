@@ -21,6 +21,8 @@
     "@typescript-eslint/ban-ts-comment": "off",
     "promise/param-names": "off",
     "@typescript-eslint/member-delimiter-style": "off",
-    "@typescript-eslint/no-misused-promises": "off"
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/no-unsafe-argument": "off",
+    "@typescript-eslint/indent": "off"
   }
 }

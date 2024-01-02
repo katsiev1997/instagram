@@ -5,7 +5,6 @@ const jwt = require('jsonwebtoken');
 const authCtrl = {
   register: async (req, res) => {
     try {
-      console.log(req.body);
       const { phone, username, email, password } = req.body;
       let newUserName = username.toLowerCase().replace(/ /g, '');
 
@@ -56,10 +55,11 @@ const authCtrl = {
     try {
       const { email, password } = req.body;
 
-      const user = await Users.findOne({ email }).populate(
-        'followers following',
-        'avatar username phone followers following'
-      );
+      const user = await Users.findOne({ email })
+      // .populate(
+      //   'followers following',
+      //   'avatar username phone followers following'
+      // );
 
       if (!user)
         return res

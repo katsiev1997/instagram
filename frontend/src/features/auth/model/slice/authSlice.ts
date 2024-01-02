@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { type AuthState } from '../types/auth';
 import { registerByEmail } from '../service/registerByEmail';
+import { loginByEmail } from '../service/loginByEmail';
 
 const initialState: AuthState = {
   loading: false,
@@ -20,6 +21,17 @@ export const authSlice = createSlice({
       state.error = '';
     });
     builder.addCase(registerByEmail.rejected, (state, action) => {
+      state.loading = false;
+      state.error = action.payload;
+    });
+    builder.addCase(loginByEmail.pending, (state) => {
+      state.loading = true;
+    });
+    builder.addCase(loginByEmail.fulfilled, (state) => {
+      state.loading = false;
+      state.error = '';
+    });
+    builder.addCase(loginByEmail.rejected, (state, action) => {
       state.loading = false;
       state.error = action.payload;
     });
