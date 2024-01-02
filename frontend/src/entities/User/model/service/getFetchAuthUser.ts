@@ -1,23 +1,17 @@
 import { type ThunkConfig } from '@/app/provider';
 import { userActions } from '@/entities/User';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { type LoginFormValues } from '../schema/useLoginForm';
 import { LOCAL_STORAGE_TOKEN } from '@/shared/consts/localStorage';
-import { type User } from '@/entities/User/model/types/user';
+import { type GetFetchLoginData } from '@/features/auth/model/service/loginByEmail';
 
-export interface GetFetchLoginData {
-  user: User;
-  token: string;
-}
-
-export const loginByEmail = createAsyncThunk<
+export const getFetchAuthUser = createAsyncThunk<
   string,
-  LoginFormValues,
+  void,
   ThunkConfig<string>
->('auth/login', async (userData, thunkApi) => {
+>('user/getAuthUser', async (_, thunkApi) => {
   const { rejectWithValue, dispatch, extra } = thunkApi;
   try {
-    const res = await extra.api.post<GetFetchLoginData>('/login', userData);
+    const res = await extra.api.post<GetFetchLoginData>('/refresh_token');
 
     if (res.data) {
       dispatch(userActions.setAuthData(res.data));
