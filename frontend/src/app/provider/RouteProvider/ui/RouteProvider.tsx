@@ -19,7 +19,7 @@ export const RouteProvider = () => {
       <Routes>
         <Route path='/' element={<AppLayout />}>
           <Route path='/' element={<HomePage />} />
-          <Route path='/profile' element={<ProfileLazyPage />} />
+          <Route path='/profile/:id' element={<ProfileLazyPage />} />
           <Route path='/messenger' element={<MessengerLazyPage />} />
           <Route path='/explore' element={<ExploreLazyPage />} />
         </Route>

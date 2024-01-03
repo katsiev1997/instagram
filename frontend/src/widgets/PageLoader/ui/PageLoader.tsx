@@ -5,7 +5,7 @@ import { getUserLoading } from '@/entities/User';
 
 export const PageLoader = () => {
   const loading = useSelector(getUserLoading);
-  if (!loading) {
+  if (loading) {
     return (
       <div className={cls.page_loader}>
         <Spinner size='l' variant='gray' />
