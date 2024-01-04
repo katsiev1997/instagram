@@ -5,6 +5,8 @@ export interface ProfileState {
   users: User[];
   user: User;
   error: string;
-  succees: string;
+  success: string;
   loading: boolean;
+  searchUsers: User[]
+  searchLoading: boolean;
 }

@@ -10,3 +10,4 @@ export { Flex } from './Stack/Flex';
 export { HStack } from './Stack/HStack';
 export { VStack } from './Stack/VStack';
 export { Text } from './Text/Text';
+export { UserCard } from './UserCard/UserCard';
