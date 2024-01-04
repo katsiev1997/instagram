@@ -1,9 +1,13 @@
-import React from 'react'
+import { ProfileInfo, ProfilePost } from '@/entities/Profile';
+import React from 'react';
 
 const ProfilePage = () => {
   return (
-    <div>ProfilePage</div>
-  )
-}
+    <div>
+      <ProfileInfo />
+      <ProfilePost />
+    </div>
+  );
+};
 
-export default ProfilePage
+export default ProfilePage;

@@ -7,8 +7,8 @@ import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 type BuildMode = 'development' | 'production';
 
 interface BuildEnv {
-  mode: BuildMode
-  port: number
+  mode: BuildMode;
+  port: number;
 }
 
 export default (env: BuildEnv) => {
@@ -81,6 +81,7 @@ export default (env: BuildEnv) => {
     output: {
       filename: '[name][contenthash].js',
       path: path.resolve(__dirname, 'build'),
+      publicPath: '/',
       clean: true,
     },
     plugins: [
