@@ -1,7 +1,3 @@
-import { type ChangeEvent, useState, useEffect } from 'react';
-import cls from './NavSearch.module.scss';
-import { HStack, Icon, UserCard, VStack } from '@/shared/ui';
-import { Text } from '@/shared/ui/Text/Text';
 import {
   getSearchLoading,
   getSearchUsers,
@@ -9,8 +5,13 @@ import {
   profileActions,
 } from '@/entities/Profile';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
-import { useSelector } from 'react-redux';
+import { HStack, Icon, UserCard, VStack } from '@/shared/ui';
+import { Text } from '@/shared/ui/Text/Text';
 import { Spin } from 'antd';
+import { debounce } from 'lodash-es';
+import { useCallback, useMemo, useState, type ChangeEvent } from 'react';
+import { useSelector } from 'react-redux';
+import cls from './NavSearch.module.scss';
 
 export const NavSearch = () => {
   const [search, setSearch] = useState<string>('');
@@ -18,18 +19,30 @@ export const NavSearch = () => {
   const searchLoading = useSelector(getSearchLoading);
   const searchUsers = useSelector(getSearchUsers);
 
+  // useEffect(() => {
+  //   if (search) {
+  //     dispatch(getUsers({ search }));
+  //   }
+  // }, [search]);
+
+  const onSearchUsers = useMemo(
+    () =>
+      debounce(async (query) => {
+        dispatch(getUsers({ search: query }));
+      }, 500),
+    []
+  );
+
   const onChangeSearch = (e: ChangeEvent<HTMLInputElement>) => {
-    setSearch(e.currentTarget.value);
+    const { value } = e.currentTarget;
+    setSearch(value);
+    onSearchUsers(value);
   };
-  useEffect(() => {
-    if (search) {
-      dispatch(getUsers({ search }));
-    }
-  }, [search]);
-  const onClearSearch = () => {
+
+  const onClearSearch = useCallback(() => {
     setSearch('');
     dispatch(profileActions.setSearchUsers());
-  };
+  }, []);
   return (
     <div className={cls.search}>
       <input type='text' value={search} onChange={onChangeSearch} />
@@ -41,7 +54,9 @@ export const NavSearch = () => {
           </Text>
         </div>
       ) : (
-        <span className={cls.close} onClick={onClearSearch}>&#215;</span>
+        <span className={cls.close} onClick={onClearSearch}>
+          &#215;
+        </span>
       )}
       {search && (
         <HStack className={cls.list} justify='start' align='center'>

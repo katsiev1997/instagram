@@ -16,6 +16,9 @@ const userSlice = createSlice({
       state.user = action.payload.user;
       state.token = action.payload.token;
     },
+    setUpdateUser: (state, action) => {
+      state.user = action.payload;
+    },
   },
   extraReducers(builder) {
     builder.addCase(getFetchAuthUser.pending, (state) => {

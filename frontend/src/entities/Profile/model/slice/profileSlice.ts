@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { type ProfileState } from '../types/profile';
 import { getUsers } from '../service/searchUsers';
+import { getUserProfile } from '../service/getUserProfile';
 
 const initialState: ProfileState = {
   posts: [],
@@ -25,16 +26,27 @@ const profileSlice = createSlice({
     },
   },
   extraReducers(builder) {
-    builder.addCase(getUsers.pending, (state) => {
-      state.searchLoading = true;
-    });
-    builder.addCase(getUsers.fulfilled, (state, action) => {
-      state.searchUsers = action.payload;
-      state.searchLoading = false;
-    });
-    builder.addCase(getUsers.rejected, (state) => {
-      state.searchLoading = false;
-    });
+    builder
+      .addCase(getUsers.pending, (state) => {
+        state.searchLoading = true;
+      })
+      .addCase(getUsers.fulfilled, (state, action) => {
+        state.searchUsers = action.payload;
+        state.searchLoading = false;
+      })
+      .addCase(getUsers.rejected, (state) => {
+        state.searchLoading = false;
+      })
+      .addCase(getUserProfile.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(getUserProfile.fulfilled, (state, action) => {
+        state.users = [...state.users, action.payload.user];
+        state.loading = false;
+      })
+      .addCase(getUserProfile.rejected, (state) => {
+        state.loading = false;
+      });
   },
 });
 

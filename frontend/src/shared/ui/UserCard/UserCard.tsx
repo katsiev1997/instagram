@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/display-name */
 import { Avatar } from 'antd';
-import { type FC } from 'react';
+import { memo, type FC } from 'react';
 import cls from './UserCard.module.scss';
 import { AppLink, HStack, Text, VStack } from '..';
 
@@ -12,7 +14,7 @@ interface UserCardProps {
   content: string;
   onClick?: () => void;
 }
-export const UserCard: FC<UserCardProps> = (props) => {
+export const UserCard: FC<UserCardProps> = memo((props) => {
   const { src, id, alt, className = '', content, title, onClick } = props;
 
   return (
@@ -30,4 +32,4 @@ export const UserCard: FC<UserCardProps> = (props) => {
       </VStack>
     </HStack>
   );
-};
+});

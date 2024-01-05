@@ -1,0 +1,633 @@
+/*!************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/widgets/Navbar/ui/NavMenu/NavMenu.module.scss ***!
+  \************************************************************************************************************************************************************************/
+.U3g6h_q9 .IQP9zcrt {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.GCwjQQU9 {
+  filter: invert(100%);
+}
+/*!**************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/shared/ui/Avatar/Avatar.module.scss ***!
+  \**************************************************************************************************************************************************************/
+.GCM50viD {
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.GCM50viD img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.PRpneMo8 {
+  max-width: 22px;
+  max-height: 22px;
+  min-width: 22px;
+  min-height: 22px;
+  height: 22px;
+}
+
+.ZYBKTEXM {
+  max-width: 32px;
+  max-height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  height: 32px;
+}
+
+.DJ6Q23ZE {
+  max-width: 56px;
+  max-height: 56px;
+  min-width: 56px;
+  min-height: 56px;
+  height: 56px;
+}
+
+.CVefCsFh {
+  max-width: 150px;
+  max-height: 150px;
+  min-width: 150px;
+  min-height: 150px;
+  height: 150px;
+}
+
+.YIFU4mq9 {
+  border: 2px solid #f1794a;
+}
+/*!**************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/shared/ui/Button/Button.module.scss ***!
+  \**************************************************************************************************************************************************************/
+.zHhbOiIz {
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 6px 9px;
+}
+.zHhbOiIz:disabled {
+  opacity: 0.6;
+}
+.zHhbOiIz.uNp_kL4_ {
+  background: var(--blue);
+  color: #fff;
+}
+.zHhbOiIz.pxBl_FAS {
+  border: 1px solid var(--border);
+  color: var(--text-color);
+  background: transparent;
+}
+.zHhbOiIz.cVwYgMD2 {
+  width: 100%;
+}
+/*!****************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/shared/ui/Spinner/Spinner.module.scss ***!
+  \****************************************************************************************************************************************************************/
+.OBGQZXcz {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 20px;
+}
+.OBGQZXcz div {
+  position: absolute;
+  top: 35%;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.OBGQZXcz.wQAbr0tU div {
+  width: 10px;
+  height: 10px;
+}
+.OBGQZXcz.OcFZ8E5Z div {
+  width: 12px;
+  height: 12px;
+}
+.OBGQZXcz.rPID2K3g div {
+  width: 15px;
+  height: 15px;
+}
+.OBGQZXcz.HAI6lBOb div {
+  background: var(--inverted-main-color);
+}
+.OBGQZXcz.jXB646uJ div {
+  background: var(--text-color);
+}
+.OBGQZXcz.K9j9llwX div {
+  background: var(--blue_500);
+}
+.OBGQZXcz.yq0UnCZU div {
+  background: #fff;
+}
+
+.OBGQZXcz div:nth-child(1) {
+  left: 8px;
+  animation: m6XDumFa 0.6s infinite;
+}
+
+.OBGQZXcz div:nth-child(2) {
+  left: 8px;
+  animation: AQ1CHLPG 0.6s infinite;
+}
+
+.OBGQZXcz div:nth-child(3) {
+  left: 32px;
+  animation: AQ1CHLPG 0.6s infinite;
+}
+
+.OBGQZXcz div:nth-child(4) {
+  left: 56px;
+  animation: ZlDiITjk 0.6s infinite;
+}
+
+@keyframes m6XDumFa {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes ZlDiITjk {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes AQ1CHLPG {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+/*!**********************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/shared/ui/Form/Form.module.scss ***!
+  \**********************************************************************************************************************************************************/
+.UoGvt20S {
+  width: 100%;
+}
+/*!**********************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/shared/ui/Icon/Icon.module.scss ***!
+  \**********************************************************************************************************************************************************/
+.EBhywGEq {
+  display: flex;
+  cursor: pointer;
+}
+/*!************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/shared/ui/Input/Input.module.scss ***!
+  \************************************************************************************************************************************************************/
+.tjhlYVyS {
+  width: 100%;
+  position: relative;
+}
+.tjhlYVyS.Gi02BFdw .v71VlLMX .emAQQ85i {
+  top: 0;
+  padding: 2px;
+  font-size: 10px;
+  background: var(--main-color-body);
+}
+.tjhlYVyS .BgTYZ9zp {
+  font-size: 10px;
+  color: var(--error);
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.1s;
+}
+.tjhlYVyS .v71VlLMX {
+  border: 1px solid var(--border);
+  width: 100%;
+  height: 34px;
+  border-radius: 3px;
+  position: relative;
+}
+.tjhlYVyS .v71VlLMX input {
+  width: inherit;
+  height: inherit;
+  background: transparent;
+  border-radius: inherit;
+  padding: 0 10px;
+  color: var(--inverted-main-color);
+}
+.tjhlYVyS .v71VlLMX .emAQQ85i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 11px;
+  color: var(--text-color);
+  transition: all 0.2s;
+  pointer-events: none;
+}
+.tjhlYVyS.YrD5PnTk .v71VlLMX {
+  border: 1px solid var(--error);
+}
+.tjhlYVyS.YrD5PnTk .v71VlLMX .emAQQ85i {
+  color: var(--error);
+}
+.tjhlYVyS.YrD5PnTk .BgTYZ9zp {
+  opacity: 1;
+  visibility: visible;
+  bottom: -12px;
+}
+/*!***********************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/shared/ui/Stack/Flex.module.scss ***!
+  \***********************************************************************************************************************************************************/
+.GuLf2xOr {
+  display: flex;
+}
+
+.COn2c4cO {
+  flex-direction: column;
+}
+
+.yGySPb6X {
+  flex-direction: row;
+}
+
+.mCm39dzL {
+  justify-content: space-between;
+}
+
+.HJXoIba1 {
+  justify-content: center;
+}
+
+.XiyOYOOG {
+  justify-content: flex-end;
+}
+
+.sgg_snQB {
+  justify-content: flex-start;
+}
+
+.MslqDRQO {
+  align-items: center;
+}
+
+.Q8D_wIX_ {
+  align-items: flex-end;
+}
+
+.aiCaStTs {
+  align-items: flex-start;
+}
+
+.JNH94wTZ {
+  flex-wrap: nowrap;
+}
+
+.ptOKjfaa {
+  flex-wrap: wrap;
+}
+
+.Zol4ej6r {
+  gap: 0px;
+}
+
+.JPzkSQ6C {
+  gap: 4px;
+}
+
+.xBjBDIGV {
+  gap: 8px;
+}
+
+.LLojNx5P {
+  gap: 12px;
+}
+
+.T_Zh44v0 {
+  gap: 16px;
+}
+
+.a6g3FARX {
+  gap: 18px;
+}
+
+.wxMGfxT8 {
+  gap: 22px;
+}
+
+.cX02rxsc {
+  gap: 26px;
+}
+
+.aEiQHYfy {
+  gap: 28px;
+}
+
+.HdH_43zY {
+  gap: 32px;
+}
+
+.pF8zpDLo {
+  gap: 36px;
+}
+
+.hHpOj05f {
+  gap: 40px;
+}
+
+._0zfQ4qN {
+  width: 100%;
+}
+/*!**********************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/shared/ui/Text/Text.module.scss ***!
+  \**********************************************************************************************************************************************************/
+.en6I1pgx {
+  font-size: 10px;
+}
+
+.Ab16S9j4 {
+  font-size: 12px;
+}
+
+.hC4eSthG {
+  font-size: 14px;
+}
+
+.nolf_qZA {
+  font-size: 18px;
+}
+
+.p9NnoUDx {
+  font-size: 22px;
+}
+
+.qHamZ1_s {
+  font-size: 28px;
+}
+
+.Qc2kqfby {
+  font-weight: 200;
+}
+
+.I8TSj_Qq {
+  font-weight: 400;
+}
+
+.m5L1iE6W {
+  font-weight: 500;
+}
+
+.NUJcGZbf {
+  font-weight: 600;
+}
+
+.yTvZTUpD {
+  font-weight: 700;
+}
+
+.IPYQzd2l {
+  color: blue;
+}
+
+.OcvwEYpG {
+  color: gray;
+}
+
+.JeFulKts {
+  color: black;
+}
+
+.YejJJSKX {
+  color: #fff;
+}
+
+.F9oLXAK4 {
+  color: var(--error);
+}
+
+.iJw6m2iu {
+  text-align: center;
+}
+
+.dBqPIG8f {
+  text-align: left;
+}
+
+.j4UBrvei {
+  text-align: right;
+}
+/*!******************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/shared/ui/UserCard/UserCard.module.scss ***!
+  \******************************************************************************************************************************************************************/
+.a6DLPxNR .F6owctmd:hover {
+  text-decoration: underline;
+}
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/entities/Profile/ui/ProfileInfo/ProfileInfo.module.scss ***!
+  \**********************************************************************************************************************************************************************************/
+.OciO8tBq {
+  filter: invert(100%);
+}
+/*!****************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/features/SwitchButton/ui/SwitchButton.module.scss ***!
+  \****************************************************************************************************************************************************************************/
+.wtFsR_KI {
+  filter: invert(100%);
+}
+/*!************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/features/LangSwitch/ui/LangSwitch.module.scss ***!
+  \************************************************************************************************************************************************************************/
+.dKq1ZRHY {
+  cursor: pointer;
+}
+/*!***************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/features/auth/ui/LoginForm/LoginForm.module.scss ***!
+  \***************************************************************************************************************************************************************************/
+.Nr_aNn90 {
+  margin-top: 80px;
+  max-width: 350px;
+  width: 100%;
+}
+
+.gipLHn7Y {
+  border: 1px solid var(--border);
+  padding: 30px;
+  background: var(--main-color-body);
+}
+
+.MS5McsLM {
+  border: 1px solid var(--border);
+  padding: 20px 10px;
+  background: var(--main-color-body);
+}
+
+.VR39EYtp {
+  filter: invert(100%);
+}
+/*!****************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/widgets/Navbar/ui/NavSearch/NavSearch.module.scss ***!
+  \****************************************************************************************************************************************************************************/
+.YBWE71zd {
+  border: 1px solid var(--border);
+  max-width: 215px;
+  width: 100%;
+  display: flex;
+  height: 28px;
+  position: relative;
+  border-radius: 3px;
+  background: var(--main-color-body);
+}
+.YBWE71zd .YZ0m8UsT {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.YBWE71zd input {
+  flex: 1;
+  height: 100%;
+  border-radius: inherit;
+  background: transparent;
+  padding: 0 6px;
+  color: var(--inverted-main-color);
+}
+.YBWE71zd .p8nojoEv {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--main-color-body);
+  min-height: 100px;
+  z-index: 10;
+  padding: 10px;
+  border-radius: 2px;
+  overflow-y: auto;
+}
+.YBWE71zd .p8nojoEv > div > div {
+  padding: 4px;
+  cursor: pointer;
+}
+.YBWE71zd .W6furHZG {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background: var(--border);
+  cursor: pointer;
+}
+/*!**********************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/widgets/Navbar/ui/Navbar/Navbar.module.scss ***!
+  \**********************************************************************************************************************************************************************/
+.EZr5cg1R {
+  border-bottom: 1px solid var(--border);
+}
+
+.WQAgzfcw {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+}
+
+.Uqv0s2uk {
+  filter: invert(100%);
+}
+/*!***********************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/widgets/PageLoader/ui/PageLoader.module.scss ***!
+  \***********************************************************************************************************************************************************************/
+.eQcbwQv2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*!************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/app/styles/index.scss ***!
+  \************************************************************************************************************************************************/
+.app_light {
+  --main-color: #fafafa;
+  --main-color-body: #fff;
+  --inverted-main-color: #080808;
+  --border: #dbdbdb;
+  --error: #db0000;
+  --blue: #4cb5f9;
+  --text-color: #737373;
+}
+
+.app_dark {
+  --main-color: #080808;
+  --main-color-body: #272727;
+  --inverted-main-color: #fafafa;
+  --border: #3b3b3b;
+  --error: #db0000;
+  --blue: #4cb5f9;
+  --text-color: #737373;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+input::placeholder {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+body {
+  background: var(--main-color);
+  color: var(--inverted-main-color);
+  transition: all 0.2s;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}

@@ -4,6 +4,7 @@ export { Button } from './Button/Button';
 export { Form } from './Form/Form';
 export { Icon } from './Icon/Icon';
 export { Input } from './Input/Input';
+export { Modal } from './Modal/Modal';
 export { DropDown } from './Popups/DropDown/DropDown';
 export { Spinner } from './Spinner/Spinner';
 export { Flex } from './Stack/Flex';
